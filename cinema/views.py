@@ -103,7 +103,7 @@ class MovieViewSet(
         movie = self.get_object()
         serializer = (self.get_serializer_class()
                       (movie, data=request.data, partial=True))
-        if not  serializer.is_valid():
+        if not serializer.is_valid():
 
             return Response(serializer.errors,
                             status=status.HTTP_400_BAD_REQUEST
